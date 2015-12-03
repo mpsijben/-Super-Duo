@@ -44,6 +44,7 @@ public class BookService extends IntentService {
 
     @Override
     protected void onHandleIntent(Intent intent) {
+        Log.e("gg", "ee");
         if (intent != null) {
             final String action = intent.getAction();
             if (FETCH_BOOK.equals(action)) {
@@ -98,7 +99,7 @@ public class BookService extends IntentService {
         try {
             final String FORECAST_BASE_URL = "https://www.googleapis.com/books/v1/volumes?";
             final String QUERY_PARAM = "q";
-
+            Log.e("e", ean);
             final String ISBN_PARAM = "isbn:" + ean;
 
             Uri builtUri = Uri.parse(FORECAST_BASE_URL).buildUpon()
