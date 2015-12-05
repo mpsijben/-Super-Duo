@@ -1,5 +1,7 @@
 package barqsoft.footballscores;
 
+import android.content.Context;
+
 /**
  * Created by yehya khaled on 3/3/2015.
  */
@@ -83,5 +85,13 @@ public class Utilies
             case "Stoke City FC" : return R.drawable.stoke_city;
             default: return R.drawable.no_icon;
         }
+    }
+
+    public static String getTeamScore(Context context, int homeGoals, int awayGoals) {
+        if (homeGoals < 0 || awayGoals < 0) {
+            return context.getString(R.string.format_scores, "", "");
+        }
+
+        return context.getString(R.string.format_scores, homeGoals, awayGoals);
     }
 }
