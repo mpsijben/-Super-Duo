@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
     <LinearLayout
@@ -36,9 +37,14 @@
         android:gravity="center"
         android:text="@string/share_text"
         android:id="@+id/share_button"
+        android:contentDescription="@string/share_button"
         android:drawableLeft="@android:drawable/ic_menu_share"
+        android:drawableStart="@android:drawable/ic_menu_share"
         android:paddingLeft="120dp"
-        android:paddingRight="120dp"/>
+        android:paddingRight="120dp"
+        android:paddingEnd="120dp"
+        android:paddingStart="120dp"
+        tools:ignore="NewApi"/>
     </FrameLayout>
 
 </LinearLayout>
