@@ -57,8 +57,7 @@ public class DetailWidgetRemoteViewsService extends RemoteViewsService {
                 }
                 final long identityToken = Binder.clearCallingIdentity();
                 Uri uri = DatabaseContract.scores_table.buildScoreWithDate();
-                String formatString = getString(R.string.dateformat_ymd);
-                SimpleDateFormat format = new SimpleDateFormat(R.string.dateformat_ymd);
+                SimpleDateFormat format = new SimpleDateFormat(getResources().getString(R.string.dateformat_ymd));
                 String todayDate = format.format(new Date());
 
                 data = getContentResolver().query(uri,
