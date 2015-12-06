@@ -162,6 +162,9 @@ public class BookService extends IntentService {
             JSONArray bookArray;
             if(bookJson.has(ITEMS)){
                 bookArray = bookJson.getJSONArray(ITEMS);
+                Intent messageIntent = new Intent(MainActivity.MESSAGE_EVENT);
+                messageIntent.putExtra(MainActivity.MESSAGE_KEY,getResources().getString(R.string.not_found));
+                LocalBroadcastManager.getInstance(getApplicationContext()).sendBroadcast(messageIntent);
             }else{
                 Intent messageIntent = new Intent(MainActivity.MESSAGE_EVENT);
                 messageIntent.putExtra(MainActivity.MESSAGE_KEY,getResources().getString(R.string.not_found));

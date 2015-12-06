@@ -31,7 +31,14 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainActivity" />
         </activity>
-
+        <activity
+            android:name=".CameraActivity"
+            android:label="@string/title_activity_camera"
+            android:parentActivityName=".MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
 
 
         <provider
